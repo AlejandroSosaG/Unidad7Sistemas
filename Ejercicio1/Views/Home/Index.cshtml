@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+}
+<p>@ViewData["Mensaje"]</p>
+<time datetime="">@ViewBag.horaActual</time>
+@model namespace.Models.Entidades.clsPersona
+<p>Nombre: @Model.Nombre, Apellido: @Model.Apellido</p>
+@Html.ActionLink("Listado de personas", "listaPersonas", "Home")
