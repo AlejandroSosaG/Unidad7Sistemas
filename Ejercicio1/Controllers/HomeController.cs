@@ -1,4 +1,5 @@
 ﻿using Ejercicio1.Models;
+using Ejercicio1.Models.DAL;
 using Ejercicio1.Models.Entidades;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -36,6 +37,21 @@ namespace Ejercicio1.Controllers
             persona.Nombre = "Alejandro";
             persona.Apellido = "Sosa";
             return View(persona);
+        }
+        public IActionResult editaPersona()
+        {
+            return View();
+        }
+        public IActionResult listaPersona()
+        {
+            try
+            {
+                return View(listadoPersonas.listaPersonas());
+            }catch (Exception ex)
+            {
+                return View("Error");
+            }
+            
         }
         
     }

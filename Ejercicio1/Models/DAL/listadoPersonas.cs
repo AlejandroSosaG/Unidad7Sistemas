@@ -2,12 +2,22 @@
 
 namespace Ejercicio1.Models.DAL
 {
-    public class listadoPersonas : clsPersona
+    public static class listadoPersonas
     {
-        List<clsPersona> lista;
-        public listadoPersonas()
+        /// <summary>
+        /// Función que devuelve un listado de personas.
+        /// Precondición: Ninguna
+        /// PostCondición: Ninguna
+        /// </summary>
+        /// <returns>lista</returns>
+        public static List<clsPersona> listaPersonas()
         {
-            lista = new List<clsPersona>();
+            List<clsPersona> lista = new List<clsPersona>(){
+                new clsPersona("Alejandro", "Sosa", 1),
+                new clsPersona("Angel", "Navarro", 2),
+                new clsPersona("Antonio", "Navarro", 3)
+            };
+            return lista;
         }
     }
 }

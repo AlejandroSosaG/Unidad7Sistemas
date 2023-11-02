@@ -11,17 +11,20 @@ namespace Ejercicio1.Models.Entidades
         #region atributos
         private string nombre;
         private string apellido;
+        private int idDept;
         #endregion
 
         #region constructores
         public clsPersona() {
             this.nombre = "";
             this.apellido = "";
+            this.idDept = 1;
         }
 
-        public clsPersona (string nombre, string apellido) {
+        public clsPersona (string nombre, string apellido, int id) {
             this.nombre = nombre;
             this.apellido = apellido;
+            this.idDept = id;
         }
         #endregion
 
@@ -35,7 +38,11 @@ namespace Ejercicio1.Models.Entidades
             get { return apellido; }
             set { apellido = value; }
         }
-
+        public int IdDept
+        {
+            get { return idDept; }
+            set { idDept = value; }
+        }
         public String Direccion { get; set; }
 
         public String NombreCompleto {
