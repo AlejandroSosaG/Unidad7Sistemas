@@ -38,7 +38,7 @@ namespace Ejercicio1.Controllers
             persona.Apellido = "Sosa";
             return View(persona);
         }
-        public IActionResult editaPersona()
+        public IActionResult EditarPersona()
         {
             return View();
         }

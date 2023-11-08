@@ -1,4 +1,6 @@
-﻿@model Ejercicio1.Models.ModelView.personaDept
-@Html.TextBoxFor(nombre => Model.Nombre)
-@Html.TextBoxFor(apellido => Model.Apellido)
+﻿
+@model Ejercicio1.Models.ModelView.personaDept
 
+<p>@Html.TextBoxFor(nombre => Model.Nombre)</p>
+<p>@Html.TextBoxFor(apellido => Model.Apellido)</p>
+<select name="@Model.Departamentos"></select>

@@ -8,7 +8,7 @@
         public clsDepartamento()
         {
             id = 1;
-            nombre = "Informática";
+            nombre = "";
         }
         public clsDepartamento(int id, String nombre)
         {
