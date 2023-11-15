@@ -9,6 +9,7 @@ namespace Ejercicio1.Models.Entidades
     public class clsPersona
     {
         #region atributos
+        private int _id;
         private string nombre;
         private string apellido;
         private int idDept;
@@ -16,20 +17,26 @@ namespace Ejercicio1.Models.Entidades
 
         #region constructores
         public clsPersona() {
+            this._id = 0;
             this.nombre = "";
             this.apellido = "";
             this.idDept = 1;
         }
 
-        public clsPersona (string nombre, string apellido, int id) {
+        public clsPersona (int id, string nombre, string apellido, int idDept) {
+            this._id = id;
             this.nombre = nombre;
             this.apellido = apellido;
-            this.idDept = id;
+            this.idDept = idDept;
         }
         #endregion
 
         #region propiedades
-            public String Nombre {
+        public int Id
+        {
+            get { return Id; }
+        }
+        public String Nombre {
             get { return nombre; }
             set { nombre = value; }
         }

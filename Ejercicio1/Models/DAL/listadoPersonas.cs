@@ -13,9 +13,9 @@ namespace Ejercicio1.Models.DAL
         public static List<clsPersona> listaPersonas()
         {
             List<clsPersona> lista = new List<clsPersona>(){
-                new clsPersona("Alejandro", "Sosa", 1),
-                new clsPersona("Angel", "Navarro", 2),
-                new clsPersona("Antonio", "Navarro", 3)
+                new clsPersona(1, "Alejandro", "Sosa", 1),
+                new clsPersona(2, "Angel", "Navarro", 2),
+                new clsPersona(3, "Antonio", "Navarro", 3)
             };
             return lista;
         }

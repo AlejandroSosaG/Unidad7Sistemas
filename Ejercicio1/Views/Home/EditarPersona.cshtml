@@ -1,6 +1,15 @@
-﻿
-@model Ejercicio1.Models.ModelView.personaDept
+﻿@using Ejercicio1.Models.Entidades
+@using Ejercicio1.Models.DAL
+@model Ejercicio1.Models.ViewModel.personaDept
 
-<p>@Html.TextBoxFor(nombre => Model.Nombre)</p>
-<p>@Html.TextBoxFor(apellido => Model.Apellido)</p>
-<select name="@Model.Departamentos"></select>
+
+<input type="hidden" name="Id" value="@Model.Id" />
+<p>@Html.TextBoxFor(nombre => @Model.Nombre)</p>
+<p>@Html.TextBoxFor(apellido => @Model.Apellido)</p>
+<select name="@Model.Departamentos">
+    @foreach(clsDepartamento departamento in Model.Departamentos){
+        <option value="@departamento.Id">@departamento.Nombre</option>
+    }
+</select>
+<button type="submit">Guardar</button>
+@Html.ActionLink("Volver", "Index", "Home")

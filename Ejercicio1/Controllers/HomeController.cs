@@ -1,6 +1,7 @@
 ﻿using Ejercicio1.Models;
 using Ejercicio1.Models.DAL;
 using Ejercicio1.Models.Entidades;
+using Ejercicio1.Models.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -39,6 +40,12 @@ namespace Ejercicio1.Controllers
             return View(persona);
         }
         public IActionResult EditarPersona()
+        {
+            personaDept personaDept = new personaDept();
+            return View(personaDept);
+        }
+        [HttpPost]
+        public IActionResult GuardarPersona(clsPersona persona)
         {
             return View();
         }
